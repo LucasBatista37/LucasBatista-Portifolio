@@ -2,14 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
+  --primary-color: #1976d2;
+  --primary-color-dark: #115293;
+  --button-text-color: #fff;
+
+  --font-medium: 500;
+
   --header-height: 3rem;
-  --hue: 0;
-  --sat: 0%;
+  --hue: 210; /* Cor azul esverdeada */
+  --sat: 60%; /* Saturação ajustada */
   --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  --title-color-dark: hsl(var(--hue), var(--sat), 10%);
+  --text-color: hsl(var(--hue), var(--sat), 35%);
+  --body-color: #f5f5f5; /* Fundo principal do corpo */
+  --container-color: #fff; /* Fundo claro para container */
 
   --body-font: "Poppins", sans-serif;
 
@@ -39,6 +45,8 @@
   --z-fixed: 100;
   --z-modal: 1000;
 }
+
+
 
 * {
   margin: 0;
@@ -123,20 +131,24 @@ img {
 
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
 
-.button:hover {
-  background-color: var(--title-color-dark);
+.button__icon {
+  align-items: center;
 }
 
 .button__icon {
-  margin-left: var(--mb-0-5);
   align-items: center;
+}
+
+.botaocor:hover {
+  background-color: var(--primary-color-dark);
+  /* Cor de fundo ao passar o mouse */
 }
 
 @media screen and (max-width: 992px) {

@@ -36,7 +36,7 @@ const About = () => {
             <br />
           </p>
 
-          <a download="" href={CV} className="button button--flex">
+          <a download="" href={CV} className="button button--flex botaocor">
             Baixar CV
             <svg
               className="button__icon"

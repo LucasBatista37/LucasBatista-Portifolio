@@ -88,10 +88,6 @@
     cursor: pointer; /* Mostra que é clicável */
   }
   
-  .home__scroll-button:hover {
-    background-color: var(--primary-color); /* Cor de fundo ao passar o mouse */
-  }
-  
   .home__scroll-name {
     font-weight: bold; /* Negrito para o texto */
   }
@@ -107,6 +103,14 @@
 
 .wheel {
     animation: scroll 2s ease infinite;
+}
+
+.button__icon {
+    transition: transform 0.2s ease; /* Transição suave para a transformação */
+}
+  
+.button:hover .button__icon {
+    transform: translate(10%, -10%); /* Movimento diagonal para a direita */
 }
 
 @keyframes scroll {
