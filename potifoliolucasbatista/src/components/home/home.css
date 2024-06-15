@@ -1,18 +1,32 @@
 .home__container {
     row-gap: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .home__content {
-    grid-template-columns: 116px repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding-top: 5.5rem;
     column-gap: 2rem;
     align-items: center;
+    justify-content: center;
+}
+
+.home__data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .home__social {
-    display: grid;
-    grid-template-columns: max-content;
-    row-gap: 1rem;
+    margin-top: var(--mb-2);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .home__social-icon {
@@ -39,7 +53,7 @@
     position: relative;
     font-size: var(--h3-font-size);
     padding-left: 5.4rem;
-    font-weight: var(--font-nomal);
+    font-weight: var(--font-normal);
     margin-bottom: var(--mb-1);
 }
 
@@ -55,7 +69,7 @@
 
 .home__description {
     max-width: 400px;
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-2);
 }
 
 .home__img {
@@ -64,38 +78,39 @@
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
-    order: 1;
-    justify-self: center;
     width: 300px;
     height: 300px;
     animation: profile__animate 8s ease-in-out infinite 1s;
-    border-radius: 50%; /* Adicione esta linha para tornar a imagem arredondada */
+    border-radius: 50%;
+    justify-self: end; /* Posiciona a imagem à direita */
+    align-self: flex-start; /* Alinha a imagem um pouco mais para cima */
 }
 
 .home__scroll {
-    display: flex; /* Flexbox para alinhar o conteúdo */
-    
-  }
-  
-  .home__scroll-button {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--mb-3);
+}
+
+.home__scroll-button {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Remove decoração de link */
-    color: var(--title-color); /* Cor do texto */
-    background-color: transparent; /* Fundo transparente */
-    border: none; /* Sem borda */
-    padding: 0.5rem 1rem; /* Ajuste o padding conforme necessário */
-    cursor: pointer; /* Mostra que é clicável */
-  }
-  
-  .home__scroll-name {
-    font-weight: bold; /* Negrito para o texto */
-  }
-  
-  .home___scroll-arrow {
-    font-size: 1.25rem; /* Tamanho do ícone */
-    color: var(--title-color); /* Cor do ícone */
-  }
+    text-decoration: none;
+    color: var(--title-color);
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.home__scroll-name {
+    font-weight: bold;
+}
+
+.home__scroll-arrow {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
 
 .home__scroll {
     margin-left: 9.25rem;
@@ -106,11 +121,11 @@
 }
 
 .button__icon {
-    transition: transform 0.2s ease; /* Transição suave para a transformação */
+    transition: transform 0.2s ease;
 }
-  
+
 .button:hover .button__icon {
-    transform: translate(10%, -10%); /* Movimento diagonal para a direita */
+    transform: translate(10%, -10%);
 }
 
 @keyframes scroll {
@@ -123,7 +138,7 @@
     }
 }
 
-.home__scrolll-name {
+.home__scroll-name {
     color: var(--title-color);
     font-weight: var(--font-medium);
     margin-right: var(--mb-0-25);
@@ -135,10 +150,13 @@
     color: var(--title-color);
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 992px) {
     .home__content {
-        grid-template-columns: 100px repeat(2, 1fr);
+        grid-template-columns: 1fr;
         column-gap: 1.25rem;
+        text-align: center;
     }
 
     .home__hand {
@@ -147,13 +165,15 @@
     }
 
     .home__subtitle {
-        padding-left: 3.75rem;
+        padding-left: 0;
         margin-bottom: var(--mb-1);
     }
 
     .home__subtitle::before {
         width: 42px;
         top: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .home__description {
@@ -161,51 +181,80 @@
         margin-bottom: var(--mb-2-5);
     }
 
+    .home__data {
+        align-items: center;
+        text-align: center; /* Centraliza o conteúdo dentro de .home__data */
+    }
+
+    .home__social {
+        margin-top: var(--mb-1);
+    }
+
     .home__img {
         width: 250px;
         height: 250px;
         box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+        align-self: flex-start; /* Alinha a imagem acima do título */
+        margin-bottom: 1rem; /* Adiciona espaço entre a imagem e o título */
+        justify-self: center; /* Centraliza a imagem */
     }
 
-    .home__scroll {
-        margin-left: 7.5rem;
+    .home__subtitle::before {
+        display: none;
     }
 }
 
 @media screen and (max-width: 768px) {
     .home__content {
-        grid-template-columns: 0.5fr 3fr;
+        grid-template-columns: 1fr;
         padding: 3.5rem;
     }
 
     .home__img {
-        order: initial;
-        justify-self: initial;
+        order: -1; /* Coloca a imagem acima de .home__data */
+        justify-self: center; /* Centraliza a imagem */
+        align-self: initial; /* Alinha a imagem acima do título */
+        box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1rem; /* Espaço entre a imagem e o título */
     }
 
     .home__data {
-        grid-column: 1/3;
-    }
-
-    .home__img {
-        box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
-        width: 200px;
-        height: 200px;
+        grid-column: 1/2;
+        text-align: center;
+        margin-top: 1.5rem; /* Espaçamento entre a imagem e .home__data */
     }
 
     .home__scroll {
+        display: none; /* Esconde o elemento de rolagem */
+    }
+
+    .home__subtitle::before {
         display: none;
     }
 }
 
 @media screen and (max-width: 350px) {
     .home__img {
-        width: 180px;
-        height: 180px;
+        order: -1; /* Coloca a imagem acima de .home__data */
+        justify-self: center; /* Centraliza a imagem */
+        align-self: initial; /* Alinha a imagem acima do título */
+        box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1rem; /* Espaço entre a imagem e o título */
     }
 
-    .home__hand {
-        width: 22px;
-        height: 22px;
+    .home__title {
+        margin-bottom: var(--mb-1); /* Espaçamento inferior do título */
+    }
+
+    .home__subtitle::before {
+        display: none;
     }
 }
+
+
+
+
