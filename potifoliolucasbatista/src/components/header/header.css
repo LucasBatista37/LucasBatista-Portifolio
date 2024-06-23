@@ -1,9 +1,10 @@
+/* Estilos gerais */
 .header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: var(--z-fixed);
+    z-index: 1000; /* Ajuste conforme necessário */
     background-color: var(--body-color);
 }
 
@@ -16,7 +17,7 @@
 }
 
 .nav__logo,
-.nav__toogle {
+.nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
 }
@@ -38,18 +39,86 @@
 
 .nav__icon,
 .nav__close,
-.nav__toogle {
+.nav__toggle {
     display: none;
 }
 
-/* Active */
 .active-link,
 .nav__link:hover {
     color: var(--title-color-dark);
 }
 
-/*======= BREAKPOINTS ==========*/
+/* Estilos para o botão de escolha de tema */
+.theme__button {
+    margin-top: 1rem;
+    text-align: center;
+    position: relative; /* Garante posicionamento relativo */
+}
 
+.theme__button-toggle {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme__button-toggle:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.theme__options {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%; /* Posição abaixo do botão por padrão */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--body-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.theme__button-toggle:hover + .theme__options,
+.theme__options:hover {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% + 0.5rem); /* Ajuste conforme necessário */
+}
+
+.theme__option {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    width: 3rem;
+    height: 3rem; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme__option:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.1);
+}
+
+/* Media query para telas menores que 768px */
 @media screen and (max-width: 768px) {
     .header {
         top: initial;
@@ -77,7 +146,7 @@
     }
 
     .nav__close {
-        position:absolute;
+        position: absolute;
         right: 1.3rem;
         bottom: .5rem;
         font-size: 1.5rem;
@@ -89,12 +158,11 @@
         color: var(--title-color-dark);
     }
 
-    .nav__toogle {
+    .nav__toggle {
         font-size: 1.1rem;
         cursor: pointer;
     }
 
-    /* Show Menu */
     .show-menu {
         bottom: 0;
     }
@@ -107,8 +175,91 @@
 
     .nav__icon,
     .nav__close,
-    .nav__toogle {
+    .nav__toggle {
         display: block;
+    }
+
+    /* Estilos para o botão de escolha de tema */
+    .theme__button {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .theme__button-toggle {
+        background-color: var(--primary-color);
+        color: var(--button-text-color);
+        border: none;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .theme__button-toggle:hover {
+        background-color: var(--primary-color-dark);
+    }
+
+    /* Estilos para o menu de opções de tema */
+    .theme__options {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: initial;
+        bottom: calc(var(--header-height) + 2.5rem); /* Posiciona abaixo do cabeçalho */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--body-color);
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
+    }
+
+    .theme__button-toggle:hover + .theme__options,
+    .theme__options:hover {
+        opacity: 1;
+        visibility: visible;
+        bottom: calc(var(--header-height) + 1.5rem); /* Ajuste conforme necessário */
+    }
+
+    .theme__option {
+        background-color: var(--primary-color);
+        color: var(--button-text-color);
+        border: none;
+        width: 3rem;
+        height: 3rem; /* Ajuste o tamanho conforme necessário */
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0.5rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .theme__option:hover {
+        background-color: var(--primary-color-dark);
+        transform: scale(1.1);
+    }
+
+    /* Ajuste para o menu de opções aparecer para cima */
+    .theme__options {
+        bottom: initial;
+        top: calc(-100% - 0.5rem); /* Posiciona acima do botão */
+    }
+
+    .theme__button-toggle:hover + .theme__options,
+    .theme__options:hover {
+        bottom: calc(var(--header-height) + 1.5rem); /* Ajuste conforme necessário */
+        top: initial;
     }
 }
 

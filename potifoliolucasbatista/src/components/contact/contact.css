@@ -125,8 +125,15 @@
 
     .contact__form {
         margin: 0 auto;
+        text-align: center; /* Centraliza elementos inline ou inline-block */
     }
-  }
+
+    .contact__button {
+        display: inline-block; /* Garante que o botão se comporte como um elemento inline para centralização */
+    }
+    }
+
+
   
   @media screen and (max-width: 576px) {
     .contact__info {

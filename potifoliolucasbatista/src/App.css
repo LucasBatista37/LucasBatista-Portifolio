@@ -2,23 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --primary-color: #1976d2;
-  --primary-color-dark: #115293;
-  --button-text-color: #fff;
+  /* Cores */
+  --primary-color: rgba(25, 118, 210, 1);
+  --primary-color-dark: rgb(150, 203, 255);
+  --button-text-color: rgba(255, 255, 255, 1);
+  --title-color: rgba(51, 51, 51, 1);
+  --title-color-dark: rgb(85, 86, 87);
+  --text-color: rgba(25, 118, 210, 1)  ;
+  --body-color: rgba(245, 245, 245, 1);
+  --container-color: rgba(255, 255, 255, 1);
 
-  --font-medium: 500;
-
-  --header-height: 3rem;
-  --hue: 210; /* Cor azul esverdeada */
-  --sat: 60%; /* Saturação ajustada */
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 10%);
-  --text-color: hsl(var(--hue), var(--sat), 35%);
-  --body-color: #f5f5f5; /* Fundo principal do corpo */
-  --container-color: #fff; /* Fundo claro para container */
-
+  /* Fontes */
   --body-font: "Poppins", sans-serif;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
 
+  /* Tamanhos de Fonte */
   --big-font-size: 3.5rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -28,10 +28,7 @@
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
 
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
+  /* Espaçamentos */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -41,12 +38,12 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
+  /* Outras Propriedades */
+  --header-height: 3rem;
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
-
-
 
 * {
   margin: 0;

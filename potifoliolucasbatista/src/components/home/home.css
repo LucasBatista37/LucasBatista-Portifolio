@@ -22,6 +22,8 @@
     justify-content: center;
 }
 
+
+
 .home__social {
     margin-top: var(--mb-2);
     display: flex;
@@ -73,7 +75,7 @@
 }
 
 .home__img {
-    background: url(../../assets/lucas-foto.jpg);
+    background: url(../../assets/lucas-foto.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
