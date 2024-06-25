@@ -20,19 +20,31 @@ export const projectsData = [
         category: 'web',
         link: 'https://all-movie-films.vercel.app/'
     },
+
+    {
+        id: 3,
+        Image: Work3,
+        title: 'ITask',
+        category: 'web',
+        link: 'https://itask-typescript.vercel.app/'
+    },
+
+    {
+        id: 4,
+        Image: Work4,
+        title: 'Em breve',
+        category: 'app',
+    },
 ];
 
 export const projectsNav = [
     {
-        name: 'all',
+        name: 'Todos',
     },
     {
         name: 'web',
     },
     {
         name: 'app',
-    },
-    {
-        name: 'design',
     },
 ]
