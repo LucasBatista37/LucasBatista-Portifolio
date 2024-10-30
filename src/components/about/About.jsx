@@ -21,10 +21,10 @@ const About = () => {
             front-end, enquanto implemento soluções robustas e escaláveis no
             back-end. <br />
             <br />
-            No front-end, sou especializado em frameworks como{" "}
+            No front-end, Trabalho com frameworks como{" "}
             <strong>React</strong> e <strong>Angular</strong>, utilizando meu
-            conhecimento avançado para criar interfaces que melhoram
-            significativamente a experiência do usuário. <br />
+            conhecimento para criar interfaces que melhoram
+            a experiência do usuário. <br />
             <br />
             No back-end, utilizo <strong>Node.js</strong> para desenvolver APIs,
             permitindo integração entre diferentes componentes da aplicação.
