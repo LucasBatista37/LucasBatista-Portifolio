@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 576px) {
   .skills__container {
-    grid-template-columns: repeat(1, minmax(150px, 2fr));
+    grid-template-columns: repeat(2, minmax(150px, 2fr));
   }
 
   .skills__icon {
@@ -74,8 +74,14 @@
 }
 
 @media screen and (max-width: 350px) {
+
+  .skills__container {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
   .skills__card {
     padding: var(--mb-0-5);
+    max-width: 150px;
   }
 
   .skills__icon {
