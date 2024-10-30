@@ -1,0 +1,137 @@
+.skills__section {
+  margin-top: 6rem;
+}
+
+.skills {
+  padding: var(--mb-2);
+  background-color: var(--body-color);
+}
+
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: var(--mb-1);
+  text-align: center;
+  transition: transform 0.3s;
+  min-width: 180px;
+}
+
+.work__technologies {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.work__card {
+  text-align: center;
+}
+
+.skills__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+}
+
+.skills__container {
+  display: grid;
+  gap: var(--mb-1);
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills__icon {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.skills__card:hover .skills__icon {
+  color: var(--hover-color);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+@media screen and (max-width: 576px) {
+  .skills__container {
+    grid-template-columns: repeat(1, minmax(150px, 2fr));
+  }
+
+  .skills__icon {
+    font-size: var(--h2-font-size);
+  }
+
+  .skills__name {
+    font-size: var(--small-font-size);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills__card {
+    padding: var(--mb-0-5);
+  }
+
+  .skills__icon {
+    font-size: var(--h3-font-size);
+  }
+
+  .skills__name {
+    font-size: var(--tiny-font-size);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
+  .skills__icon {
+    font-size: var(--h3-font-size);
+  }
+
+  .skills__name {
+    font-size: var(--normal-font-size);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .skills__container {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills__container {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+.skills__card {
+  border-radius: 8px;
+  padding: var(--mb-1);
+  text-align: center;
+  transition: transform 0.3s;
+  min-width: 180px;
+}
+
+.skills__card:hover {
+  transform: translateY(-5px);
+}
+
+.skills__icon {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.skills__name {
+  margin-top: var(--mb-0-5);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+}

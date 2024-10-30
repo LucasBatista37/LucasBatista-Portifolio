@@ -1,0 +1,114 @@
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.work__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work__img {
+  width: 100%;
+  max-width: 295px;
+  border-radius: 0.75rem;
+  margin-bottom: var(--mb-1);
+  transition: transform 0.3s ease;
+}
+
+.work__card:hover .work__img {
+  transform: scale(1.05);
+}
+
+.work__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+  text-align: center;
+}
+
+.work__button {
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.work__button:hover {
+  background-color: var(--primary-color);
+}
+
+.work__button-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.work__button:hover .work__button-icon {
+  transform: translateX(0.3rem);
+}
+
+.work__technologies {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.work__tech-tag {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 992px) {
+  .work__container {
+    gap: 1.25rem;
+  }
+
+  .work__card {
+    padding: 1.25rem;
+  }
+
+  .work__img {
+    margin-bottom: 0.75rem;
+  }
+
+  .work__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .work__container {
+    grid-template-columns: 1fr;
+  }
+
+  .work__img {
+    width: 100%;
+  }
+}
