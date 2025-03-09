@@ -57,6 +57,35 @@
   transition: background-color 0.3s ease;
 }
 
+.work__filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.work__filters button {
+  border: none;
+  background-color: var(--container-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.work__filters button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.active-filter {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
 .work__button:hover {
   background-color: var(--primary-color);
 }

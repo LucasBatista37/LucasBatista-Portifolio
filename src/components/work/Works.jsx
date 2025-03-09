@@ -1,18 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { projectsData } from "./Data";
 import WorkItems from "./WorkItems";
 
-const Works = () => {
-  const [projects, setProjects] = useState([]);
+const categories = ["todos", "web", "mobile"];
 
-  useEffect(() => {
-    setProjects(projectsData); 
-  }, []);
+const Works = () => {
+  const [projects] = useState(projectsData); 
+  const [filter, setFilter] = useState("todos");
+
+  const handleFilterChange = (category) => {
+    setFilter(category);
+  };
+
+  const filteredProjects =
+    filter === "todos"
+      ? projects 
+      : projects.filter((project) => project.category === filter);
 
   return (
     <div>
+      <div className="work__filters">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => handleFilterChange(cat)}
+            className={filter === cat ? "active-filter" : ""}
+          >
+            {cat.toUpperCase()}
+          </button>
+        ))}
+      </div>
+
       <div className="work__container container grid">
-        {projects.map((item) => (
+        {filteredProjects.map((item) => (
           <WorkItems item={item} key={item.id} />
         ))}
       </div>
