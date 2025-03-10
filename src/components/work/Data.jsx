@@ -4,15 +4,13 @@ import CondoView from "../../assets/condoview.png";
 import Work1 from "../../assets/swift.jpg";
 import Work2 from "../../assets/movie.jpg";
 import Work3 from "../../assets/itask.jpg";
-import Work4 from "../../assets/pokeapi.png";
-import Work5 from "../../assets/work5.jpg";
 
 export const projectsData = [
     {
         id: 1,
         Image: ReactGram,
         title: 'ReactGram',
-        link: '',
+        link: 'https://github.com/LucasBatista37/ReactGram/wiki/Prints-do-Projeto',
         github: 'https://github.com/LucasBatista37/ReactGram',
         description: 'Rede social inspirada no instagram',
         technologies: ['React', 'NodeJs', 'MongoDB'],
@@ -22,7 +20,7 @@ export const projectsData = [
         id: 2,
         Image: Work1,
         title: 'MiniBlog',
-        link: 'https://swift-post-portifolio-qh1m.vercel.app/',
+        link: '',
         github: 'https://github.com/LucasBatista37/Miniblog',
         description: 'Um Mini Blog feito usando Firebase e React',
         technologies: ['React', 'Firebase'],
@@ -66,16 +64,6 @@ export const projectsData = [
         github: 'https://github.com/LucasBatista37/Task_Typescript',
         description: 'Aplicativo para gerenciamento de tarefas.',
         technologies: ['TypeScript', 'React'],
-        category: 'web'
-    },
-    {
-        id: 7,
-        Image: Work4,
-        title: 'PokeApi',
-        link: 'https://pokemon-api-hazel.vercel.app/',
-        github: 'https://github.com/LucasBatista37/PokemonApi',
-        description: 'Sistema de pesquisa usando a PokeApi',
-        technologies: ['Html', 'Css', 'Javascript', 'API HTTP'],
         category: 'web'
     },
 ];

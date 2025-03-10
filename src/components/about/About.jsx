@@ -22,7 +22,7 @@ const About = () => {
             back-end. <br />
             <br />
             No front-end, Trabalho com frameworks como{" "}
-            <strong>React</strong> e <strong>Angular</strong>, utilizando meu
+            <strong>React</strong> e <strong>Flutter</strong>, utilizando meu
             conhecimento para criar interfaces que melhoram
             a experiência do usuário. <br />
             <br />
