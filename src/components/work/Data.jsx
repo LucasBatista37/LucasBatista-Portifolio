@@ -20,7 +20,7 @@ export const projectsData = [
         id: 2,
         Image: Work1,
         title: 'MiniBlog',
-        link: '',
+        link: 'https://github.com/LucasBatista37/Miniblog/wiki/Prints-do-Projeto',
         github: 'https://github.com/LucasBatista37/Miniblog',
         description: 'Um Mini Blog feito usando Firebase e React',
         technologies: ['React', 'Firebase'],
