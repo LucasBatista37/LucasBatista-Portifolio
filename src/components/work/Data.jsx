@@ -50,8 +50,8 @@ export const projectsData = [
         id: 5,
         Image: Work2,
         title: 'Central Filmes',
-        link: 'https://all-movie-films.vercel.app/',
-        github: 'https://github.com/LucasBatista37/AllMovie_Films',
+        link: 'https://centralfilmes.vercel.app/',
+        github: 'https://github.com/LucasBatista37/Central-Filmes',
         description: 'Uma aplicação para encontrar informações de filmes.',
         technologies: ['React', 'API REST'],
         category: 'web'
