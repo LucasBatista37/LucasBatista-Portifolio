@@ -52,7 +52,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="footer__trademark">Lucas Batista©2006-2024</p>
+        <p className="footer__trademark">Lucas Batista©2006-2025</p>
       </div>
     </footer>
   );
