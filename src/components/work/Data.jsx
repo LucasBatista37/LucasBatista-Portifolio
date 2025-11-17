@@ -1,12 +1,14 @@
-import Ciclou from "../../assets/ciclousombreado.png";
-import CondoView from "../../assets/condoview.png";
-import Beyond from "../../assets/beyond.png";
-import PetLitoral from "../../assets/petlitoral.png";
-import ReactGram from "../../assets/reactgram.png";
-import PetCare from "../../assets/PetCare.png";
-import Work1 from "../../assets/swift.jpg";
-import Work2 from "../../assets/movie.jpg";
-import Work3 from "../../assets/itask.jpg";
+import Ciclou from "../../assets/ciclousombreado.webp";
+import CondoView from "../../assets/condoview.webp";
+import Beyond from "../../assets/beyond.webp";
+import PetLitoral from "../../assets/petlitoral.webp";
+import ReactGram from "../../assets/reactgram.webp";
+import PetCare from "../../assets/PetCare.webp";
+import GessoGrandeRocha from "../../assets/aldemirgessologo.webp";
+import MaisClean from "../../assets/maiscleanlogo.webp";
+import Work1 from "../../assets/swift.webp";
+import Work2 from "../../assets/movie.webp";
+import Work3 from "../../assets/itask.webp";
 
 export const projectsData = [
     {
@@ -23,9 +25,9 @@ export const projectsData = [
         id: 2,
         Image: CondoView,
         title: 'CondoView',
-        link: '',
+        link: 'https://youtu.be/E2fc69-hLe4',
         github: 'https://github.com/LucasBatista37/Condoview-App',
-        description: 'Condoview busca facilitar a administração do condomínio',
+        description: 'App que busca facilitar a administração do condomínio',
         technologies: ['Flutter', 'NodeJs', 'MongoDB'],
         category: 'mobile'
     },
@@ -35,7 +37,7 @@ export const projectsData = [
         title: 'Pet Litoral',
         link: 'https://petlitoral.shop',
         github: 'https://github.com/LucasBatista37/Pet-Litoral-Page',
-        description: 'Site feito para agendamento de banho e tosa feito para o pet shop Pet Litoral.',
+        description: 'Site para a loja Pet Litoral',
         technologies: ['React'],
         category: 'web'
     },
@@ -46,21 +48,41 @@ export const projectsData = [
         link: 'https://beyondsystem.online/',
         github: 'https://github.com/LucasBatista37/Beyond-Site',
         description: 'Site para a empresa freelance Beyond System',
-        technologies: ['React', 'Tawind'],
+        technologies: ['React', 'Tailwindcss'],
         category: 'web'
     }, 
     {
         id: 5,
         Image: PetCare,
         title: 'PetCare',
-        link: 'www.petcare.shop',
-        github: 'https://github.com/LucasBatista37/Beyond-Site',
-        description: 'Sistema de Gestão para Pet Shops.',
-        technologies: ['React', 'Tawind', 'NodeJs', 'MongoDB'],
+        link: 'https://www.petcarezone.shop',
+        github: 'https://github.com/LucasBatista37/PetShop-Agendamento-Sistema',
+        description: 'Sistema de Gestão para Pet Shops',
+        technologies: ['React', 'Tailwindcss', 'NodeJs', 'MongoDB'],
         category: 'web'
     },
     {
         id: 6,
+        Image: GessoGrandeRocha,
+        title: 'Gesso Grande Rocha',
+        link: 'https://www.gessogranderocha.com.br',
+        github: 'https://github.com/LucasBatista37/GessoGrandeRocha',
+        description: 'Site profissional para a empresa Gesso Grande Rocha.',
+        technologies: ['React', 'Tailwindcss'],
+        category: 'web'
+    },
+    {
+        id: 7,
+        Image: MaisClean,
+        title: 'Mais Clean',
+        link: 'https://maiscleanhigienizacao.com.br/persianas',
+        github: 'https://maiscleanhigienizacao.com.br/persianas',
+        description: 'Site profissional para a empresa Mais Clean focado em persianas.',
+        technologies: ['WordPress', 'Elementor'],
+        category: 'web'
+    },
+    {
+        id: 8,
         Image: Work1,
         title: 'MiniBlog',
         link: 'https://github.com/LucasBatista37/Miniblog/wiki/Prints-do-Projeto',
@@ -70,7 +92,7 @@ export const projectsData = [
         category: 'web'
     }, 
     {
-        id: 7,
+        id: 9,
         Image: ReactGram,
         title: 'ReactGram',
         link: 'https://github.com/LucasBatista37/ReactGram/wiki/Prints-do-Projeto',
@@ -80,7 +102,7 @@ export const projectsData = [
         category: 'web'
     },
     {
-        id: 8,
+        id: 10,
         Image: Work2,
         title: 'Central Filmes',
         link: 'https://centralfilmes.vercel.app/',
@@ -90,7 +112,7 @@ export const projectsData = [
         category: 'web'
     },
     {
-        id: 9,
+        id: 11,
         Image: Work3,
         title: 'Tarefa Rápida',
         link: 'https://itask-typescript.vercel.app/',

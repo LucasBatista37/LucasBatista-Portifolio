@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFileEarmarkText } from "react-icons/bs";
 import "./about.css";
-import AboutImg from "../../assets/sobre.jpg";
+import AboutImg from "../../assets/sobre.webp";
 import CV from "../../assets/LucasCV.pdf";
 
 const About = () => {
